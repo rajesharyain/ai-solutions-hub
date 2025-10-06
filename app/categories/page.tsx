@@ -40,44 +40,43 @@ export default function CategoriesPage() {
                   href={`/categories/${key}`}
                   className="group block"
                 >
-                  <div className="card p-8 h-full hover:scale-105 transition-all duration-300">
-                    {/* Category Icon */}
-                    <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                      {category.icon}
-                    </div>
-
-                    {/* Category Info */}
-                    <h3 className="text-2xl font-bold text-white mb-4 group-hover:gradient-text transition-all duration-300">
-                      {category.name}
-                    </h3>
-                    <p className="text-gray-300 mb-6 leading-relaxed">
-                      {category.description}
-                    </p>
-
-                    {/* Stats */}
-                    <div className="grid grid-cols-2 gap-4 mb-6">
-                      <div className="text-center">
-                        <div className="text-2xl font-bold gradient-text">{categoryAutomations.length}</div>
-                        <div className="text-sm text-gray-400">Automations</div>
+                  <div className="card p-6 h-full hover:scale-105 transition-all duration-300">
+                    {/* Header with Icon and Title */}
+                    <div className="flex items-start mb-4">
+                      <div className="text-4xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                        {category.icon}
                       </div>
-                      <div className="text-center">
-                        <div className="text-2xl font-bold gradient-text">{totalDownloads.toLocaleString()}</div>
-                        <div className="text-sm text-gray-400">Downloads</div>
+                      <div className="flex-1">
+                        <h3 className="text-xl font-bold gradient-text mb-2">
+                          {category.name}
+                        </h3>
+                        <p className="text-gray-400 text-sm leading-relaxed">
+                          {category.description}
+                        </p>
                       </div>
                     </div>
 
-                    {/* Rating */}
-                    <div className="flex items-center justify-center mb-6">
+                    {/* Stats Row */}
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center space-x-4">
+                        <div className="text-center">
+                          <div className="text-lg font-bold text-white">{categoryAutomations.length}</div>
+                          <div className="text-xs text-gray-400">Automations</div>
+                        </div>
+                        <div className="text-center">
+                          <div className="text-lg font-bold gradient-text">{totalDownloads.toLocaleString()}</div>
+                          <div className="text-xs text-gray-400">Downloads</div>
+                        </div>
+                      </div>
                       <div className="flex items-center">
                         <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
-                        <span className="text-white font-semibold">{avgRating.toFixed(1)}</span>
-                        <span className="text-gray-400 ml-1">rating</span>
+                        <span className="text-sm font-semibold text-white">{avgRating.toFixed(1)}</span>
                       </div>
                     </div>
 
                     {/* CTA */}
                     <div className="flex items-center text-primary-400 group-hover:text-primary-300 transition-colors duration-300">
-                      <span className="font-semibold">Explore {categoryAutomations.length} automations</span>
+                      <span className="font-semibold text-sm">Explore {categoryAutomations.length} automations</span>
                       <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                     </div>
 
