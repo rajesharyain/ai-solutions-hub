@@ -4,7 +4,7 @@ import { useState, useMemo } from 'react'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
 import { automations, automationCategories, getAutomationsByCategory, getAutomationsByPricing, searchAutomations } from '@/lib/automations'
-import { Search, Filter, Star, Download, Clock, Zap, ChevronDown } from 'lucide-react'
+import { Search, Filter, Star, Download, Clock, Zap, ChevronDown, MessageCircle } from 'lucide-react'
 
 export default function AutomationsPage() {
   const [searchQuery, setSearchQuery] = useState('')
@@ -294,6 +294,26 @@ export default function AutomationsPage() {
             </button>
           </div>
         )}
+        
+        {/* Custom Solutions CTA */}
+        <div className="mt-16 bg-dark-800/50 rounded-xl p-8 text-center">
+          <h3 className="text-2xl font-bold text-white mb-4">
+            Need Something Custom?
+          </h3>
+          <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
+            Don't see the automation you need? We'll create custom AI solutions tailored to your specific business requirements.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <button className="bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center group">
+              <Zap className="w-5 h-5 mr-2" />
+              Request Custom Automation
+            </button>
+            <button className="bg-gradient-to-r from-primary-500 to-secondary-500 hover:from-primary-600 hover:to-secondary-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center group">
+              <MessageCircle className="w-5 h-5 mr-2" />
+              Custom AI Solution
+            </button>
+          </div>
+        </div>
       </div>
     </div>
   )

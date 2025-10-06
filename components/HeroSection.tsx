@@ -55,7 +55,7 @@ export default function HeroSection() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
+            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8"
           >
             <Link
               href="/automations"
@@ -71,6 +71,22 @@ export default function HeroSection() {
               <Play className="w-5 h-5 mr-2" />
               Watch Demo
             </Link>
+          </motion.div>
+
+          {/* Custom Automation CTA */}
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.8 }}
+            className="text-center mb-12"
+          >
+            <p className="text-gray-400 mb-4">
+              Don't see what you need? We'll build it for you!
+            </p>
+            <button className="bg-gradient-to-r from-accent-500 to-accent-600 hover:from-accent-600 hover:to-accent-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center mx-auto group">
+              <Zap className="w-5 h-5 mr-2" />
+              Request Custom Automation
+            </button>
           </motion.div>
 
           {/* Stats */}
