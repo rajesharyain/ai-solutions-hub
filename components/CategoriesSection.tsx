@@ -43,23 +43,25 @@ export default function CategoriesSection() {
                 href={`/categories/${key}`}
                 className="group block"
               >
-                <div className="card p-8 h-full hover:scale-105 transition-all duration-300">
-                  {/* Category Icon */}
-                  <div className="text-6xl mb-6 group-hover:scale-110 transition-transform duration-300">
-                    {category.icon}
+                <div className="card p-6 h-full hover:scale-105 transition-all duration-300">
+                  {/* Header with Icon and Title */}
+                  <div className="flex items-start mb-4">
+                    <div className="text-4xl mr-4 group-hover:scale-110 transition-transform duration-300">
+                      {category.icon}
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-xl font-bold gradient-text mb-2">
+                        {category.name}
+                      </h3>
+                      <p className="text-gray-400 text-sm leading-relaxed">
+                        {category.description}
+                      </p>
+                    </div>
                   </div>
-
-                  {/* Category Info */}
-                  <h3 className="text-2xl font-bold gradient-text mb-4">
-                    {category.name}
-                  </h3>
-                  <p className="text-gray-300 mb-6 leading-relaxed">
-                    {category.description}
-                  </p>
 
                   {/* CTA */}
                   <div className="flex items-center text-primary-400 group-hover:text-primary-300 transition-colors duration-300">
-                    <span className="font-semibold">Explore Automations</span>
+                    <span className="font-semibold text-sm">Explore Automations</span>
                     <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
 
