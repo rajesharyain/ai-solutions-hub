@@ -1,0 +1,31 @@
+# AI Automation Hub - Environment Variables
+
+# Database
+DATABASE_URL="postgresql://username:password@localhost:5432/ai_automation_hub"
+
+# NextAuth.js
+NEXTAUTH_URL="http://localhost:3000"
+NEXTAUTH_SECRET="your-nextauth-secret-key"
+
+# OAuth Providers
+GOOGLE_CLIENT_ID="your-google-client-id"
+GOOGLE_CLIENT_SECRET="your-google-client-secret"
+FACEBOOK_CLIENT_ID="your-facebook-client-id"
+FACEBOOK_CLIENT_SECRET="your-facebook-client-secret"
+
+# Stripe (for payments)
+STRIPE_SECRET_KEY="sk_test_your_stripe_secret_key"
+STRIPE_PUBLISHABLE_KEY="pk_test_your_stripe_publishable_key"
+STRIPE_WEBHOOK_SECRET="whsec_your_webhook_secret"
+
+# OpenAI (for AI features)
+OPENAI_API_KEY="sk-your-openai-api-key"
+
+# Email Service (optional)
+SMTP_HOST="smtp.gmail.com"
+SMTP_PORT="587"
+SMTP_USER="your-email@gmail.com"
+SMTP_PASS="your-app-password"
+
+# App Configuration
+NODE_ENV="development"
